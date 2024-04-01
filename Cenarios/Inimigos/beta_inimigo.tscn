@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4lgk1rm7oe5g"]
+
+[ext_resource type="SpriteFrames" uid="uid://barvu2tur3md3" path="res://Cenarios/Inimigos/beta_inimigo_sprite.tres" id="1_k7t33"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkpqy"]
+
+[node name="beta_inimigo" type="Node2D"]
+
+[node name="animated_sprite_2d" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_k7t33")
+
+[node name="static_body_2d" type="StaticBody2D" parent="."]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="static_body_2d"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_xkpqy")

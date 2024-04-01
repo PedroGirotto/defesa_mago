@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="defesa_mago"
+run/main_scene="res://Cenarios/Mapa/base_mapa.tscn"
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[debug]
+
+settings/stdout/print_fps=true
+settings/stdout/print_gpu_profile=true
+
+[display]
+
+window/size/viewport_width=1366
+window/size/viewport_height=768
+window/size/resizable=false
+
+[dotnet]
+
+project/assembly_name="defesa_mago"
+
+[editor]
+
+naming/node_name_casing=2
+
+[layer_names]
+
+2d_render/layer_1="terra"
+2d_render/layer_2="mago"
+2d_render/layer_3="goblin"
+2d_physics/layer_1="terra"
+2d_physics/layer_2="mago"
+2d_physics/layer_3="goblin"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
