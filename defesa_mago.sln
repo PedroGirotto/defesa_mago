@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "defesa_mago", "defesa_mago.csproj", "{31A492A0-7AAD-46B6-994C-12B313DF9B16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "defesa_mago", "defesa_mago.csproj", "{EBABBD38-81CD-4C99-881A-24933B3AC16F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{31A492A0-7AAD-46B6-994C-12B313DF9B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31A492A0-7AAD-46B6-994C-12B313DF9B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31A492A0-7AAD-46B6-994C-12B313DF9B16}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{31A492A0-7AAD-46B6-994C-12B313DF9B16}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{31A492A0-7AAD-46B6-994C-12B313DF9B16}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{31A492A0-7AAD-46B6-994C-12B313DF9B16}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{EBABBD38-81CD-4C99-881A-24933B3AC16F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBABBD38-81CD-4C99-881A-24933B3AC16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBABBD38-81CD-4C99-881A-24933B3AC16F}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{EBABBD38-81CD-4C99-881A-24933B3AC16F}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{EBABBD38-81CD-4C99-881A-24933B3AC16F}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{EBABBD38-81CD-4C99-881A-24933B3AC16F}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

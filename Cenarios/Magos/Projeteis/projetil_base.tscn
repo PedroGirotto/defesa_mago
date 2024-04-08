@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://h26677namuax"]
+
+[ext_resource type="Script" path="res://Scripts/Magos/Projeteis/projetil_base.cs" id="1_rw8wo"]
+[ext_resource type="SpriteFrames" uid="uid://tpl1bacm3brl" path="res://Cenarios/Magos/Projeteis/projetil_base.tres" id="1_y12nr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8rj5"]
+radius = 4.12311
+
+[node name="projetil_base" type="Node2D"]
+script = ExtResource("1_rw8wo")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_y12nr")
+
+[node name="corpo" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="corpo"]
+shape = SubResource("CircleShape2D_e8rj5")

@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://0kji0u6cckj3"]
+[gd_scene load_steps=5 format=3 uid="uid://0kji0u6cckj3"]
 
 [ext_resource type="Script" path="res://Scripts/Mapa/mapa_base.cs" id="1_7r5ir"]
 [ext_resource type="TileSet" uid="uid://cwwh5tb7yowup" path="res://Assets/Tileset/grama_terra.tres" id="1_vacuf"]
+[ext_resource type="PackedScene" uid="uid://b0wqfc877cc06" path="res://Cenarios/Magos/mago_base.tscn" id="3_lmug5"]
+[ext_resource type="Script" path="res://Scripts/Mapa/spawn.cs" id="4_v8lhw"]
 
-[node name="MapaBase" type="Node2D" node_paths=PackedStringArray("camera", "mapa")]
+[node name="MapaBase" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_7r5ir")
-camera = NodePath("camera")
-mapa = NodePath("terra")
 
 [node name="terra" type="TileMap" parent="."]
 tile_set = ExtResource("1_vacuf")
@@ -18,3 +18,16 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 0, 131072, 196
 [node name="camera" type="Camera2D" parent="."]
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="mago_base" parent="." instance=ExtResource("3_lmug5")]
+position = Vector2(330, 86)
+
+[node name="spanw" type="Node2D" parent="."]
+position = Vector2(56, 57)
+script = ExtResource("4_v8lhw")
+
+[node name="timer" type="Timer" parent="spanw"]
+wait_time = 2.5
+autostart = true
+
+[connection signal="timeout" from="spanw/timer" to="spanw" method="OnTimeOut"]

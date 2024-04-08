@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://cyt4wc56y5af6"]
+
+[ext_resource type="Texture2D" uid="uid://b5sgg0gum66k1" path="res://Assets/Magos/SpriteSheet3.png" id="1_aou45"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv331"]
+atlas = ExtResource("1_aou45")
+region = Rect2(48, 48, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv331")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

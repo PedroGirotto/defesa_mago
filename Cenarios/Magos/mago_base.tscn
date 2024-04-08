@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0wqfc877cc06"]
+
+[ext_resource type="Script" path="res://Scripts/Magos/mago_base.cs" id="1_gj81d"]
+[ext_resource type="SpriteFrames" uid="uid://cyt4wc56y5af6" path="res://Cenarios/Magos/mago_base.tres" id="1_hmeux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs5ja"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y2s2g"]
+
+[node name="mago_base" type="Node2D" groups=["Magos"]]
+texture_filter = 1
+script = ExtResource("1_gj81d")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("1_hmeux")
+
+[node name="corpo" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="formato" type="CollisionShape2D" parent="corpo"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_bs5ja")
+
+[node name="visao" type="Area2D" parent="."]
+texture_filter = 1
+collision_layer = 2
+collision_mask = 4
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="visao"]
+scale = Vector2(5.657, 5.657)
+shape = SubResource("CircleShape2D_y2s2g")
+
+[connection signal="area_entered" from="visao" to="." method="OnAreaEnteredVisao"]
+[connection signal="area_exited" from="visao" to="." method="OnAreaExitedVisao"]

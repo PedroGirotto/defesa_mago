@@ -2,19 +2,16 @@ using Godot;
 using System;
 
 public partial class mapa_base : Node2D{
-	// TODO: descobrir uma maneira descente de pegar os componentes direto por código
-	[Export]
-	Camera2D camera;
-
-	[Export]
-	TileMap mapa;
-
-	
-	Rect2I area;
+	private Camera2D camera;
+	private TileMap mapa;
+	private Rect2I area;
 
 
 
 	public override void _Ready(){
+		mapa = GetNode<TileMap>("terra");
+		camera = GetNode<Camera2D>("camera");
+
 		ConfigurarCamera();
 	}
 
@@ -25,6 +22,11 @@ public partial class mapa_base : Node2D{
 
 
 
+	/*
+	* função responsável por pegar a camera o tileset do Node principal
+	* pega o tamanho de uma célula do tileset e calcula o tamanho total do mapa
+	* assim reajustando o zoom da camera para encaixar o tamanho do mapa na tela.
+	*/
 	private void ConfigurarCamera(){
 		area = mapa.GetUsedRect();
 		float comprimento_area = area.Size.X*mapa.TileSet.TileSize.X; // 16 é o tamanho do pixel do tileset
