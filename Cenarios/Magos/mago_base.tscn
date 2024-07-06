@@ -12,6 +12,7 @@ texture_filter = 1
 script = ExtResource("1_gj81d")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
+z_index = 1
 texture_filter = 1
 sprite_frames = ExtResource("1_hmeux")
 

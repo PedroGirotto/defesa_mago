@@ -10,6 +10,7 @@ radius = 4.12311
 script = ExtResource("1_rw8wo")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
+z_index = 2
 sprite_frames = ExtResource("1_y12nr")
 
 [node name="corpo" type="Area2D" parent="."]
@@ -18,3 +19,5 @@ collision_mask = 4
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="corpo"]
 shape = SubResource("CircleShape2D_e8rj5")
+
+[connection signal="area_entered" from="corpo" to="." method="OnAreaEntered"]

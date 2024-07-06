@@ -41,7 +41,7 @@ public partial class mago_base : Node2D{
 
 
 
-	//* Sinais
+	//* sinais
 	private void OnAreaEnteredVisao(Area2D body){
 		if(body.IsInGroup("Goblins")){
 			goblins_alvos.Add(body.GetParent<Node2D>());
