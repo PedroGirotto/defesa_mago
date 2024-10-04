@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0wqfc877cc06"]
 
-[ext_resource type="Script" path="res://Scripts/Magos/mago_base.cs" id="1_gj81d"]
 [ext_resource type="SpriteFrames" uid="uid://cyt4wc56y5af6" path="res://Cenarios/Magos/mago_base.tres" id="1_hmeux"]
+[ext_resource type="Script" path="res://Scripts/Magos/MagoBase.cs" id="1_ldcnn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bs5ja"]
 
@@ -9,7 +9,7 @@
 
 [node name="mago_base" type="Node2D" groups=["Magos"]]
 texture_filter = 1
-script = ExtResource("1_gj81d")
+script = ExtResource("1_ldcnn")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 z_index = 1

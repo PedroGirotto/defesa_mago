@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class spawn : Node2D{
+public partial class Spawn : Node2D{
 	private PackedScene goblins;
 
 

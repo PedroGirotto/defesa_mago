@@ -1,9 +1,9 @@
 using Godot;
 using System;
 
-public partial class beta_inimigo : Node2D{
+public partial class BetaInimigo : Node2D{
 	public override void _Ready(){
-		GD.Print("Goblin Position: " + GlobalPosition);
+		
 	}
 
 

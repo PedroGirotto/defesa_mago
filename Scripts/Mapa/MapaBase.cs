@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class mapa_base : Node2D{
+public partial class MapaBase : Node2D{
 	private Camera2D camera;
 	private TileMap mapa;
 	private Rect2I area;

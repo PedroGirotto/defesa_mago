@@ -2,8 +2,8 @@ using Godot;
 using Godot.Collections;
 using System;
 
-public partial class mago_base : Node2D{
-	private Array<Node2D> goblins_alvos;
+public partial class MagoBase : Node2D{
+	private Array<Node2D> alvoGoblins;
 	private PackedScene ataque;
 	
 	
@@ -18,7 +18,7 @@ public partial class mago_base : Node2D{
 
 
 	public override void _Ready(){
-		goblins_alvos = new Array<Node2D>();
+		alvoGoblins = new Array<Node2D>();
 		ataque = GD.Load<PackedScene>("res://Cenarios/Magos/Projeteis/projetil_base.tscn");
 	}
 
@@ -30,9 +30,9 @@ public partial class mago_base : Node2D{
 
 
 	//* funções de apoio
-	public Node2D get_alvo_atual(){
-		if(goblins_alvos.Count > 0){
-			return goblins_alvos[0];
+	public Node2D getAlvoAtual(){
+		if(alvoGoblins.Count > 0){
+			return alvoGoblins[0];
 		}
 		else{
 			return null;
@@ -43,17 +43,15 @@ public partial class mago_base : Node2D{
 
 	//* sinais
 	private void OnAreaEnteredVisao(Area2D body){
-		if(body.IsInGroup("Goblins")){
-			goblins_alvos.Add(body.GetParent<Node2D>());
+		if(body.GetParent<Node2D>().IsInGroup(GerenteGrupos.Instance.goblins)){
+			alvoGoblins.Add(body.GetParent<Node2D>());
 		}
-		GD.Print(goblins_alvos[0]);
-		GD.Print(goblins_alvos.Count);
 		CallDeferred("add_child", ataque.Instantiate()); //! entender o porque disso aqui!!!!
 	}
 
 
 
 	private void OnAreaExitedVisao(Area2D body){
-		goblins_alvos.Remove(body.GetParent<Node2D>());
+		alvoGoblins.Remove(body.GetParent<Node2D>());
 	}
 }
